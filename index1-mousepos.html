@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .fp{
+        width: 100%;
+        height: 300vh;
+        background-image: linear-gradient(35deg,rgb(19, 18, 18), rgb(47, 45, 45), rgb(19, 19, 19));
+    }
+    .fp>header{
+        width: 100%;
+        height: 100px;
+        border: 1px solid white;
+        background-color: gainsboro;
+    }
+    .fp>header>ul{
+        /* background-color: aqua; */
+        display: flex;
+        height: 100%;
+    }
+    .fp>header>ul>li{
+        list-style: none;
+        width: 100%;
+        height: 100%;
+        border: 1px solid gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        color: black;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        text-transform: capitalize;
+        cursor: pointer;
+    }
+    .fp>div{
+        border-radius: 50%;
+        position: fixed;
+        
+    }
+    .circle1{
+        width: 5px;
+        height: 5px;
+        transition: .5s ease;
+        border: 1px solid brown;
+        z-index: 99;
+
+        
+    }
+    .circle2{
+        width: 35px;
+        height: 35px;
+        transform: translate(-50%, -50%);
+        transition: .4s linear;
+        background-image: url(img/vector-lens-flare-effect-round-isolated-transparent-optical-design-rays-space-star-explosion-luxury-sparkling-vector-lens-158638443.jpg);
+        background-position: center;
+        background-size: cover;
+        box-shadow: 0 10px 60px 0 rgba(255, 255, 255, 0.553);
+        
+    }
+    .fp>section{
+        width: 50%;
+        font-size: 25px;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        text-transform: capitalize;
+        text-align: justify;
+        margin: 50px auto;
+        color: rgba(220, 220, 220, 0.595);
+
+    }
+</style>
+<body>
+    <section class="fp">
+        <header>
+            <ul>
+                <li>home</li>
+                <li>portfolio</li>
+                <li>about</li>
+                <li>contact</li>
+                <li>resume</li>
+            </ul>
+        </header>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem distinctio accusamus quo! Quasi cumque quam neque beatae! Est assumenda eius voluptate! Fugiat explicabo recusandae neque? Neque ducimus molestias delectus ullam?</section>
+        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem distinctio accusamus quo! Quasi cumque quam neque beatae! Est assumenda eius voluptate! Fugiat explicabo recusandae neque? Neque ducimus molestias delectus ullam?</section>
+        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem distinctio accusamus quo! Quasi cumque quam neque beatae! Est assumenda eius voluptate! Fugiat explicabo recusandae neque? Neque ducimus molestias delectus ullam?</section>
+        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem distinctio accusamus quo! Quasi cumque quam neque beatae! Est assumenda eius voluptate! Fugiat explicabo recusandae neque? Neque ducimus molestias delectus ullam?</section>
+        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem distinctio accusamus quo! Quasi cumque quam neque beatae! Est assumenda eius voluptate! Fugiat explicabo recusandae neque? Neque ducimus molestias delectus ullam?</section>
+        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem distinctio accusamus quo! Quasi cumque quam neque beatae! Est assumenda eius voluptate! Fugiat explicabo recusandae neque? Neque ducimus molestias delectus ullam?</section>
+        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem distinctio accusamus quo! Quasi cumque quam neque beatae! Est assumenda eius voluptate! Fugiat explicabo recusandae neque? Neque ducimus molestias delectus ullam?</section>
+        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis harum rem deserunt asperiores magnam odit distinctio ducimus laudantium incidunt impedit, illo quibusdam quo sapiente vel! Cupiditate totam aspernatur aut rem modi est consectetur maiores non ex repudiandae, ipsa in ad doloribus vitae vero facere debitis beatae aliquid. Repudiandae, consectetur asperiores.</section>
+        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis harum rem deserunt asperiores magnam odit distinctio ducimus laudantium incidunt impedit, illo quibusdam quo sapiente vel! Cupiditate totam aspernatur aut rem modi est consectetur maiores non ex repudiandae, ipsa in ad doloribus vitae vero facere debitis beatae aliquid. Repudiandae, consectetur asperiores.</section>
+        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis harum rem deserunt asperiores magnam odit distinctio ducimus laudantium incidunt impedit, illo quibusdam quo sapiente vel! Cupiditate totam aspernatur aut rem modi est consectetur maiores non ex repudiandae, ipsa in ad doloribus vitae vero facere debitis beatae aliquid. Repudiandae, consectetur asperiores.</section>
+        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis harum rem deserunt asperiores magnam odit distinctio ducimus laudantium incidunt impedit, illo quibusdam quo sapiente vel! Cupiditate totam aspernatur aut rem modi est consectetur maiores non ex repudiandae, ipsa in ad doloribus vitae vero facere debitis beatae aliquid. Repudiandae, consectetur asperiores.</section>
+    </section>
+</body>
+<script>
+    let _circle =document.querySelectorAll('.fp>div')
+    document.getElementsByClassName('fp')[0].addEventListener('mousemove',(e)=>{
+        x= e.clientX
+        y= e.clientY
+        _circle[0].style.top=(y+27)+'px'
+        _circle[0].style.left=(x+27)+'px'
+        _circle[1].style.top=(y+30)+'px'
+        _circle[1].style.left=(x+30)+'px'
+    })
+
+
+
+</script>
+</html>
